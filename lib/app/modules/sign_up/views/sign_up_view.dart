@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:video_streaming_app/app/routes/app_pages.dart';
 
 import '../../../data/widgets/button.dart';
 import '../../../data/widgets/text_field.dart';
@@ -67,7 +68,9 @@ class SignUpView extends GetView<SignUpController> {
                     style: TextStyle(fontWeight: FontWeight.w500),
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Get.toNamed(Routes.SIGN_IN);
+                    },
                     child: const Text(
                       "Sign in",
                       style: TextStyle(
