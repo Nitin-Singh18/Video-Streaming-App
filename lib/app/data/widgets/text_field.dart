@@ -4,11 +4,13 @@ class CTextField extends StatelessWidget {
   final String title;
   final String hintText;
   final Size size;
+  final TextEditingController controller;
   const CTextField(
       {super.key,
       required this.title,
       required this.hintText,
-      required this.size});
+      required this.size,
+      required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -29,6 +31,7 @@ class CTextField extends StatelessWidget {
           height: size.height / 80,
         ),
         TextFormField(
+          controller: controller,
           cursorColor: Colors.blue,
           maxLines: 1,
           decoration: InputDecoration(
